@@ -11,5 +11,10 @@ var yksrv = client.guilds.get('478176156655550494');
         yksrv.roles.find('name', 'רול מחליף צבעים').edit({color: 'RANDOM'})
     },process.env.RAINBOW);
 });
+client.on('message', msg => {
+    if (msg.content === `*ping`) {
+      msg.reply(`Pong! The ping is **${(client.ping).toFixed(0)}**ms!  :ping_pong:`)
+    }
+  });
 
 client.login(process.env.TOKEN)
